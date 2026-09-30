@@ -20,7 +20,7 @@ python3 -m http.server 8000   # http://localhost:8000
 
 1. Crie o repositório no GitHub e faça push da branch `main`.
 2. Em **Settings → Pages**, escolha *Deploy from a branch* → `main` / `/ (root)`.
-3. (Opcional) Para usar `viral.top`, crie um arquivo `CNAME` com `viral.top` e aponte o DNS para o GitHub Pages.
+3. (Opcional) Para usar um domínio próprio, crie um arquivo `CNAME` com o domínio e aponte o DNS para o GitHub Pages.
 
 ## Marca
 
