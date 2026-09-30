@@ -1,13 +1,13 @@
 <!doctype html>
-<html lang="pt-BR">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>viral — an AI corporation</title>
-  <meta name="description" content="viral é uma empresa de tecnologia e inteligência artificial de Fortaleza. Ideias que crescem exponencialmente e se espalham rápido.">
+  <meta name="description" data-i18n-attr="content:meta.description" content="viral is a technology and artificial intelligence company. Ideas that grow exponentially and spread fast.">
   <meta name="theme-color" content="#BE0078">
   <meta property="og:title" content="viral — an AI corporation">
-  <meta property="og:description" content="Inteligência que se espalha. Tecnologia e IA desenhadas com proporção áurea.">
+  <meta property="og:description" content="Intelligence that spreads. Technology and AI designed with the golden ratio.">
   <meta property="og:type" content="website">
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -38,16 +38,21 @@
   </svg>
 
   <header class="nav" id="top">
-    <a class="brand" href="#top" aria-label="viral — início">
+    <a class="brand" href="#top" aria-label="viral">
       <svg class="brand-mark"><use href="#mark"/></svg>
       <svg class="brand-word"><use href="#wordmark"/></svg>
     </a>
     <nav>
-      <a href="#conceito">Conceito</a>
-      <a href="#solucoes">Soluções</a>
-      <a href="#desenho">Desenho</a>
-      <a href="#socios">Sócios</a>
-      <a class="nav-cta" href="#contato">Contato</a>
+      <a href="#conceito" data-i18n="nav.concept">Concept</a>
+      <a href="#solucoes" data-i18n="nav.solutions">Solutions</a>
+      <a href="#desenho" data-i18n="nav.drawing">Design</a>
+      <a href="#socios" data-i18n="nav.partners">Partners</a>
+      <a class="nav-cta" href="#contato" data-i18n="nav.contact">Contact</a>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="pt">PT</button>
+        <button type="button" data-lang="en">EN</button>
+        <button type="button" data-lang="es">ES</button>
+      </div>
     </nav>
   </header>
 
@@ -66,16 +71,16 @@
       </svg>
 
       <div class="hero-inner">
-        <svg class="hero-mark" role="img" aria-label="Símbolo viral"><use href="#mark"/></svg>
+        <svg class="hero-mark" role="img" aria-label="viral"><use href="#mark"/></svg>
         <div class="hero-copy">
           <svg class="hero-word" role="img" aria-label="viral"><use href="#wordmark"/></svg>
-          <h1>Inteligência que se espalha.</h1>
-          <p class="lede">Uma empresa de tecnologia e inteligência artificial que cria produtos com propulsão para alcançar o jamais alcançado.</p>
+          <h1 data-i18n="hero.title">Intelligence that spreads.</h1>
+          <p class="lede" data-i18n="hero.lede">A technology and artificial intelligence company building products with the propulsion to reach the never reached.</p>
 
-          <form class="prompt" onsubmit="event.preventDefault(); document.querySelector('#contato').scrollIntoView({behavior:'smooth'})">
-            <label for="prompt-input" class="sr-only">Pergunte à viral</label>
+          <form class="prompt" id="prompt-form">
+            <label for="prompt-input" class="sr-only" data-i18n="hero.promptLabel">Ask viral</label>
             <input id="prompt-input" type="text" autocomplete="off" placeholder="Welcome to viral, an AI corporation.">
-            <button type="submit" aria-label="Enviar">
+            <button type="submit" aria-label="Send" data-i18n-attr="aria-label:hero.send">
               <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21" stroke-linecap="round"/></svg>
             </button>
           </form>
@@ -84,24 +89,24 @@
 
       <div class="hero-foot">
         <span>φ = 1,6180</span>
-        <span>Fortaleza — CE</span>
-        <a href="#conceito" class="scroll-cue">role ↓</a>
+        <span>Alicante — ES</span>
+        <a href="#conceito" class="scroll-cue" data-i18n="hero.scroll">scroll ↓</a>
       </div>
     </section>
 
     <!-- CONCEITO -->
     <section class="concept" id="conceito">
       <div class="wrap">
-        <p class="eyebrow"><span>01</span> Conceito</p>
-        <h2 class="statement reveal">Um vírus em laboratório.<br><em>Uma ideia universal, que cresce exponencialmente e se espalha rápido.</em></h2>
+        <p class="eyebrow"><span>01</span> <b data-i18n="nav.concept">Concept</b></p>
+        <h2 class="statement reveal" data-i18n="concept.statement">A virus in the lab.<br><em>A universal idea that grows exponentially and spreads fast.</em></h2>
 
         <div class="pillars">
           <article class="pillar reveal">
             <div class="pillar-icon" aria-hidden="true">
               <svg viewBox="0 0 170 242"><use href="#mark"/></svg>
             </div>
-            <h3>Nave</h3>
-            <p>Propulsão. A forma do vírus T4 se assemelha a uma nave — e é ela que nos leva a alcançar o jamais alcançado.</p>
+            <h3 data-i18n="concept.ship.title">Ship</h3>
+            <p data-i18n="concept.ship.text">Propulsion. The shape of the T4 virus resembles a spaceship — and it's what takes us to reach the never reached.</p>
           </article>
           <article class="pillar reveal">
             <div class="pillar-icon" aria-hidden="true">
@@ -113,17 +118,17 @@
               </svg>
             </div>
             <h3>Viral</h3>
-            <p>Um conceito difundido na internet. Construímos tecnologia que ganha tração sozinha: útil, simples e fácil de compartilhar.</p>
+            <p data-i18n="concept.viral.text">A concept spread across the internet. We build technology that gains traction on its own: useful, simple and easy to share.</p>
           </article>
           <article class="pillar reveal">
             <div class="pillar-icon phi" aria-hidden="true">φ</div>
             <h3>PHI</h3>
-            <p>Na busca eterna pelo belo, a proporção áurea é nossa ferramenta. Proporções intencionais, nunca acidentais.</p>
+            <p data-i18n="concept.phi.text">In the eternal search for beauty, the golden ratio is our tool. Intentional proportions, never accidental ones.</p>
           </article>
         </div>
 
         <blockquote class="quote reveal">
-          <p>“Não sabemos porquê, mas podemos demonstrar que um ser humano acha os planos de proporções definidas e intencionais mais agradáveis ou mais belos do que os de proporções acidentais.”</p>
+          <p data-i18n="concept.quote">“We cannot say why, but we can demonstrate that a human being finds planes of definite and intentional proportions more pleasing or more beautiful than those of accidental proportions.”</p>
           <cite>Jan Tschichold</cite>
         </blockquote>
       </div>
@@ -132,36 +137,36 @@
     <!-- SOLUÇÕES -->
     <section class="solutions" id="solucoes">
       <div class="wrap">
-        <p class="eyebrow light"><span>02</span> Soluções</p>
-        <h2 class="reveal">O que colocamos em órbita.</h2>
+        <p class="eyebrow light"><span>02</span> <b data-i18n="nav.solutions">Solutions</b></p>
+        <h2 class="reveal" data-i18n="solutions.title">What we put into orbit.</h2>
 
         <ol class="services">
           <li class="reveal">
             <span class="fib">1</span>
             <div>
-              <h3>Agentes de IA</h3>
-              <p>Assistentes e agentes autônomos que conversam, pesquisam e executam tarefas no lugar da sua equipe.</p>
+              <h3 data-i18n="solutions.s1.title">AI agents</h3>
+              <p data-i18n="solutions.s1.text">Assistants and autonomous agents that talk, research and get tasks done for your team.</p>
             </div>
           </li>
           <li class="reveal">
             <span class="fib">2</span>
             <div>
-              <h3>Automação inteligente</h3>
-              <p>Processos repetitivos transformados em fluxos que rodam sozinhos, integrados às ferramentas que você já usa.</p>
+              <h3 data-i18n="solutions.s2.title">Intelligent automation</h3>
+              <p data-i18n="solutions.s2.text">Repetitive processes turned into flows that run on their own, integrated with the tools you already use.</p>
             </div>
           </li>
           <li class="reveal">
             <span class="fib">3</span>
             <div>
-              <h3>Dados &amp; modelos</h3>
-              <p>Da coleta ao modelo em produção: pipelines, análises e aprendizado de máquina sob medida.</p>
+              <h3 data-i18n="solutions.s3.title">Data &amp; models</h3>
+              <p data-i18n="solutions.s3.text">From collection to model in production: pipelines, analytics and tailor-made machine learning.</p>
             </div>
           </li>
           <li class="reveal">
             <span class="fib">5</span>
             <div>
-              <h3>Produtos digitais</h3>
-              <p>Aplicações web e mobile desenhadas com precisão — limpas, rápidas e prontas para escalar.</p>
+              <h3 data-i18n="solutions.s4.title">Digital products</h3>
+              <p data-i18n="solutions.s4.text">Web and mobile applications designed with precision — clean, fast and ready to scale.</p>
             </div>
           </li>
         </ol>
@@ -172,17 +177,17 @@
     <section class="drawing" id="desenho">
       <div class="wrap drawing-grid">
         <div class="drawing-copy">
-          <p class="eyebrow"><span>03</span> O desenho</p>
-          <h2 class="reveal">Desenhado com φ.</h2>
-          <p class="reveal">Cada círculo do símbolo nasce de um quadrado da sequência de Fibonacci. Basta produzir quadrados com largura igual à largura atual mais a anterior: 1, 1, 2, 3, 5, 8, 13…</p>
+          <p class="eyebrow"><span>03</span> <b data-i18n="drawing.eyebrow">The design</b></p>
+          <h2 class="reveal" data-i18n="drawing.title">Designed with φ.</h2>
+          <p class="reveal" data-i18n="drawing.text">Every circle in the symbol is born from a square of the Fibonacci sequence. Just draw squares whose width equals the current width plus the previous one: 1, 1, 2, 3, 5, 8, 13…</p>
           <dl class="palette reveal">
-            <div><dt><i style="background:#BE0078"></i>Roxo Viral</dt><dd>#BE0078 · R190 G0 B120</dd></div>
-            <div><dt><i style="background:#000"></i>Preto Viral</dt><dd>#000000 · R0 G0 B0</dd></div>
-            <div><dt><i style="background:#848688"></i>Cinza Viral</dt><dd>#848688 · R132 G134 B136</dd></div>
+            <div><dt><i style="background:#BE0078"></i><span data-i18n="drawing.c1">Viral Purple</span></dt><dd>#BE0078 · R190 G0 B120</dd></div>
+            <div><dt><i style="background:#000"></i><span data-i18n="drawing.c2">Viral Black</span></dt><dd>#000000 · R0 G0 B0</dd></div>
+            <div><dt><i style="background:#848688"></i><span data-i18n="drawing.c3">Viral Grey</span></dt><dd>#848688 · R132 G134 B136</dd></div>
           </dl>
         </div>
 
-        <figure class="construction" aria-label="Construção do símbolo sobre o retângulo áureo">
+        <figure class="construction" aria-label="Golden rectangle construction">
           <svg viewBox="-2 -2 237 148">
             <g class="c-lines" fill="none" stroke="#848688" stroke-width=".5">
               <rect x="0" y="0" width="233" height="144"/>
@@ -218,22 +223,22 @@
     <!-- SÓCIOS -->
     <section class="team" id="socios">
       <div class="wrap">
-        <p class="eyebrow"><span>04</span> Sócios</p>
-        <h2 class="reveal">Duas mentes, uma mesma órbita.</h2>
+        <p class="eyebrow"><span>04</span> <b data-i18n="nav.partners">Partners</b></p>
+        <h2 class="reveal" data-i18n="team.title">Two minds, one orbit.</h2>
         <div class="partners">
           <a class="partner reveal" href="https://github.com/julioflima" target="_blank" rel="noopener">
-            <img src="https://github.com/julioflima.png?size=320" alt="Foto de Julio Lima" width="160" height="160" loading="lazy">
+            <img src="https://github.com/julioflima.png?size=320" alt="Julio Lima" width="160" height="160" loading="lazy">
             <div>
               <h3>Julio Lima</h3>
-              <p class="role">Sócio · Fullstack Developer</p>
+              <p class="role" data-i18n="team.julio">Partner · Fullstack Developer</p>
               <span class="handle">github.com/julioflima ↗</span>
             </div>
           </a>
           <a class="partner reveal" href="https://github.com/MelisseLima" target="_blank" rel="noopener">
-            <img src="https://github.com/MelisseLima.png?size=320" alt="Foto de Melisse Lima" width="160" height="160" loading="lazy">
+            <img src="https://github.com/MelisseLima.png?size=320" alt="Melisse Lima" width="160" height="160" loading="lazy">
             <div>
               <h3>Melisse Lima</h3>
-              <p class="role">Sócia · Software Engineer</p>
+              <p class="role" data-i18n="team.melisse">Partner · Software Engineer</p>
               <span class="handle">github.com/MelisseLima ↗</span>
             </div>
           </a>
@@ -245,14 +250,37 @@
     <section class="contact" id="contato">
       <svg class="contact-mark" aria-hidden="true"><use href="#mark"/></svg>
       <div class="wrap">
-        <p class="eyebrow light"><span>05</span> Contato</p>
-        <h2 class="reveal">Vamos espalhar sua próxima ideia.</h2>
-        <a class="cta reveal" href="mailto:contato@viral.top">contato@viral.top <span aria-hidden="true">→</span></a>
-        <address class="reveal">
-          Rua Justa Araújo, 142<br>
-          Fortaleza — CE, Brasil<br>
-          <a href="https://viral.top">viral.top</a>
-        </address>
+        <p class="eyebrow light"><span>05</span> <b data-i18n="nav.contact">Contact</b></p>
+        <div class="contact-grid">
+          <div>
+            <h2 class="reveal" data-i18n="contact.title">Let's spread your next idea.</h2>
+            <address class="reveal">
+              Calle Beniarbeig, 15, 3K<br>
+              <span data-i18n="contact.city">Alicante, Spain</span><br>
+              <a href="mailto:juliocflima@gmail.com">juliocflima@gmail.com</a><br>
+              <a href="https://viral.top">viral.top</a>
+            </address>
+          </div>
+
+          <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/xppwnyvq" method="POST">
+            <input type="hidden" name="_subject" value="viral — new contact">
+            <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="sr-only" aria-hidden="true">
+            <label>
+              <span data-i18n="form.name">Name</span>
+              <input type="text" name="name" required autocomplete="name">
+            </label>
+            <label>
+              <span data-i18n="form.email">Email</span>
+              <input type="email" name="email" required autocomplete="email">
+            </label>
+            <label>
+              <span data-i18n="form.message">Message</span>
+              <textarea name="message" id="contact-message" rows="5" required></textarea>
+            </label>
+            <button type="submit" class="cta"><span data-i18n="form.send">Send message</span> <span aria-hidden="true">→</span></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
