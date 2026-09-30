@@ -44,6 +44,13 @@ const I18N = {
     'team.melisse': 'Sócia · Software Engineer',
     'contact.title': 'Vamos espalhar sua próxima ideia.',
     'contact.city': 'Alicante, Espanha',
+    'form.name': 'Nome',
+    'form.email': 'Email',
+    'form.message': 'Mensagem',
+    'form.send': 'Enviar mensagem',
+    'form.sending': 'Enviando…',
+    'form.ok': 'Mensagem enviada! Responderemos em breve.',
+    'form.error': 'Não foi possível enviar. Tente novamente ou escreva para juliocflima@gmail.com.',
   },
   en: {
     'meta.description': 'viral is a technology and artificial intelligence company. Ideas that grow exponentially and spread fast.',
@@ -89,6 +96,13 @@ const I18N = {
     'team.melisse': 'Partner · Software Engineer',
     'contact.title': 'Let\'s spread your next idea.',
     'contact.city': 'Alicante, Spain',
+    'form.name': 'Name',
+    'form.email': 'Email',
+    'form.message': 'Message',
+    'form.send': 'Send message',
+    'form.sending': 'Sending…',
+    'form.ok': 'Message sent! We\'ll get back to you soon.',
+    'form.error': 'Couldn\'t send it. Please try again or write to juliocflima@gmail.com.',
   },
   es: {
     'meta.description': 'viral es una empresa de tecnología e inteligencia artificial. Ideas que crecen exponencialmente y se propagan rápido.',
@@ -134,6 +148,13 @@ const I18N = {
     'team.melisse': 'Socia · Software Engineer',
     'contact.title': 'Propaguemos tu próxima idea.',
     'contact.city': 'Alicante, España',
+    'form.name': 'Nombre',
+    'form.email': 'Email',
+    'form.message': 'Mensaje',
+    'form.send': 'Enviar mensaje',
+    'form.sending': 'Enviando…',
+    'form.ok': '¡Mensaje enviado! Te responderemos pronto.',
+    'form.error': 'No se pudo enviar. Inténtalo de nuevo o escribe a juliocflima@gmail.com.',
   },
 };
 
@@ -153,12 +174,14 @@ function detectLang() {
   return 'en';
 }
 
+let currentLang = 'en';
 let prompts = I18N.en['hero.prompts'];
 let promptIndex = 0;
 const input = document.querySelector('#prompt-input');
 
 function setLang(lang, persist = false) {
   const dict = I18N[lang];
+  currentLang = lang;
   document.documentElement.lang = lang === 'pt' ? 'pt-BR' : lang;
 
   document.querySelectorAll('[data-i18n]').forEach((el) => {
@@ -210,5 +233,42 @@ setInterval(() => {
   promptIndex = (promptIndex + 1) % prompts.length;
   input.placeholder = prompts[promptIndex];
 }, 3200);
+
+// ---------- Hero prompt → contact form ----------
+const message = document.querySelector('#contact-message');
+document.querySelector('#prompt-form').addEventListener('submit', (e) => {
+  e.preventDefault();
+  if (input.value.trim()) message.value = input.value.trim();
+  document.querySelector('#contato').scrollIntoView({ behavior: 'smooth' });
+  setTimeout(() => document.querySelector('#contact-form [name=name]').focus({ preventScroll: true }), 700);
+});
+
+// ---------- Contact form (Formspree) ----------
+const form = document.querySelector('#contact-form');
+const statusEl = form.querySelector('.form-status');
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const t = I18N[currentLang];
+  const button = form.querySelector('button[type=submit]');
+  button.disabled = true;
+  statusEl.className = 'form-status';
+  statusEl.textContent = t['form.sending'];
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { Accept: 'application/json' },
+    });
+    if (!res.ok) throw new Error(res.status);
+    form.reset();
+    statusEl.classList.add('ok');
+    statusEl.textContent = t['form.ok'];
+  } catch (_) {
+    statusEl.classList.add('error');
+    statusEl.textContent = t['form.error'];
+  } finally {
+    button.disabled = false;
+  }
+});
 
 document.querySelector('#year').textContent = new Date().getFullYear();
