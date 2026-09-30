@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>viral — an AI corporation</title>
+  <meta name="description" content="viral é uma empresa de tecnologia e inteligência artificial de Fortaleza. Ideias que crescem exponencialmente e se espalham rápido.">
+  <meta name="theme-color" content="#BE0078">
+  <meta property="og:title" content="viral — an AI corporation">
+  <meta property="og:description" content="Inteligência que se espalha. Tecnologia e IA desenhadas com proporção áurea.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Martian+Mono:wght@200;300;400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Reusable brand symbols -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="mark" viewBox="0 0 170 242">
+      <g class="arm arm-a"><line x1="76" y1="38" x2="38" y2="202" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="38" cy="202" r="24" fill="currentColor"/></g>
+      <g class="arm arm-b"><line x1="76" y1="38" x2="139" y2="225" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="139" cy="225" r="15" fill="currentColor"/></g>
+      <g class="arm arm-c"><line x1="76" y1="38" x2="153" y2="163" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><circle cx="153" cy="163" r="8" fill="currentColor"/></g>
+      <circle cx="76" cy="38" r="38" fill="currentColor"/>
+    </symbol>
+    <!-- Wordmark drawn to echo the Squared Display face -->
+    <symbol id="wordmark" viewBox="-2 -2 216 84">
+      <g fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="square" stroke-linejoin="miter">
+        <path d="M0 24 L18 80 L36 24"/>
+        <path d="M48 24 H64 M53 24 V80"/>
+        <path d="M78 80 V24 H104"/>
+        <path d="M118 24 H160 V80 H118 V52 H160"/>
+        <path d="M176 0 V80 H210"/>
+      </g>
+    </symbol>
+  </svg>
+
+  <header class="nav" id="top">
+    <a class="brand" href="#top" aria-label="viral — início">
+      <svg class="brand-mark"><use href="#mark"/></svg>
+      <svg class="brand-word"><use href="#wordmark"/></svg>
+    </a>
+    <nav>
+      <a href="#conceito">Conceito</a>
+      <a href="#solucoes">Soluções</a>
+      <a href="#desenho">Desenho</a>
+      <a href="#socios">Sócios</a>
+      <a class="nav-cta" href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <svg class="hero-grid" viewBox="0 0 233 144" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <g fill="none" stroke="currentColor" stroke-width=".25">
+          <rect x="0" y="0" width="144" height="144"/>
+          <rect x="144" y="55" width="89" height="89"/>
+          <rect x="178" y="0" width="55" height="55"/>
+          <rect x="144" y="0" width="34" height="34"/>
+          <rect x="144" y="34" width="21" height="21"/>
+          <path d="M0 0 A144 144 0 0 0 144 144 A89 89 0 0 0 233 55 A55 55 0 0 0 178 0 A34 34 0 0 0 144 34 A21 21 0 0 0 165 55 A13 13 0 0 0 178 42"/>
+        </g>
+      </svg>
+
+      <div class="hero-inner">
+        <svg class="hero-mark" role="img" aria-label="Símbolo viral"><use href="#mark"/></svg>
+        <div class="hero-copy">
+          <svg class="hero-word" role="img" aria-label="viral"><use href="#wordmark"/></svg>
+          <h1>Inteligência que se espalha.</h1>
+          <p class="lede">Uma empresa de tecnologia e inteligência artificial que cria produtos com propulsão para alcançar o jamais alcançado.</p>
+
+          <form class="prompt" onsubmit="event.preventDefault(); document.querySelector('#contato').scrollIntoView({behavior:'smooth'})">
+            <label for="prompt-input" class="sr-only">Pergunte à viral</label>
+            <input id="prompt-input" type="text" autocomplete="off" placeholder="Welcome to viral, an AI corporation.">
+            <button type="submit" aria-label="Enviar">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10.5" cy="10.5" r="6.5"/><path d="M15.5 15.5 21 21" stroke-linecap="round"/></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="hero-foot">
+        <span>φ = 1,6180</span>
+        <span>Fortaleza — CE</span>
+        <a href="#conceito" class="scroll-cue">role ↓</a>
+      </div>
+    </section>
+
+    <!-- CONCEITO -->
+    <section class="concept" id="conceito">
+      <div class="wrap">
+        <p class="eyebrow"><span>01</span> Conceito</p>
+        <h2 class="statement reveal">Um vírus em laboratório.<br><em>Uma ideia universal, que cresce exponencialmente e se espalha rápido.</em></h2>
+
+        <div class="pillars">
+          <article class="pillar reveal">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 170 242"><use href="#mark"/></svg>
+            </div>
+            <h3>Nave</h3>
+            <p>Propulsão. A forma do vírus T4 se assemelha a uma nave — e é ela que nos leva a alcançar o jamais alcançado.</p>
+          </article>
+          <article class="pillar reveal">
+            <div class="pillar-icon" aria-hidden="true">
+              <svg viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="50" cy="50" r="4" fill="currentColor"/>
+                <circle cx="50" cy="50" r="14"/>
+                <circle cx="50" cy="50" r="26" opacity=".6"/>
+                <circle cx="50" cy="50" r="40" opacity=".3"/>
+              </svg>
+            </div>
+            <h3>Viral</h3>
+            <p>Um conceito difundido na internet. Construímos tecnologia que ganha tração sozinha: útil, simples e fácil de compartilhar.</p>
+          </article>
+          <article class="pillar reveal">
+            <div class="pillar-icon phi" aria-hidden="true">φ</div>
+            <h3>PHI</h3>
+            <p>Na busca eterna pelo belo, a proporção áurea é nossa ferramenta. Proporções intencionais, nunca acidentais.</p>
+          </article>
+        </div>
+
+        <blockquote class="quote reveal">
+          <p>“Não sabemos porquê, mas podemos demonstrar que um ser humano acha os planos de proporções definidas e intencionais mais agradáveis ou mais belos do que os de proporções acidentais.”</p>
+          <cite>Jan Tschichold</cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- SOLUÇÕES -->
+    <section class="solutions" id="solucoes">
+      <div class="wrap">
+        <p class="eyebrow light"><span>02</span> Soluções</p>
+        <h2 class="reveal">O que colocamos em órbita.</h2>
+
+        <ol class="services">
+          <li class="reveal">
+            <span class="fib">1</span>
+            <div>
+              <h3>Agentes de IA</h3>
+              <p>Assistentes e agentes autônomos que conversam, pesquisam e executam tarefas no lugar da sua equipe.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="fib">2</span>
+            <div>
+              <h3>Automação inteligente</h3>
+              <p>Processos repetitivos transformados em fluxos que rodam sozinhos, integrados às ferramentas que você já usa.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="fib">3</span>
+            <div>
+              <h3>Dados &amp; modelos</h3>
+              <p>Da coleta ao modelo em produção: pipelines, análises e aprendizado de máquina sob medida.</p>
+            </div>
+          </li>
+          <li class="reveal">
+            <span class="fib">5</span>
+            <div>
+              <h3>Produtos digitais</h3>
+              <p>Aplicações web e mobile desenhadas com precisão — limpas, rápidas e prontas para escalar.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- DESENHO -->
+    <section class="drawing" id="desenho">
+      <div class="wrap drawing-grid">
+        <div class="drawing-copy">
+          <p class="eyebrow"><span>03</span> O desenho</p>
+          <h2 class="reveal">Desenhado com φ.</h2>
+          <p class="reveal">Cada círculo do símbolo nasce de um quadrado da sequência de Fibonacci. Basta produzir quadrados com largura igual à largura atual mais a anterior: 1, 1, 2, 3, 5, 8, 13…</p>
+          <dl class="palette reveal">
+            <div><dt><i style="background:#BE0078"></i>Roxo Viral</dt><dd>#BE0078 · R190 G0 B120</dd></div>
+            <div><dt><i style="background:#000"></i>Preto Viral</dt><dd>#000000 · R0 G0 B0</dd></div>
+            <div><dt><i style="background:#848688"></i>Cinza Viral</dt><dd>#848688 · R132 G134 B136</dd></div>
+          </dl>
+        </div>
+
+        <figure class="construction" aria-label="Construção do símbolo sobre o retângulo áureo">
+          <svg viewBox="-2 -2 237 148">
+            <g class="c-lines" fill="none" stroke="#848688" stroke-width=".5">
+              <rect x="0" y="0" width="233" height="144"/>
+              <path d="M144 0 V144 M144 55 H233 M178 0 V55 M144 34 H178 M165 34 V55"/>
+              <path class="diag" d="M0 0 L144 144 M144 0 L0 144" stroke-dasharray="2 2" opacity=".5"/>
+            </g>
+            <path class="c-spiral" fill="none" stroke="#BE0078" stroke-width=".7"
+              d="M0 0 A144 144 0 0 0 144 144 A89 89 0 0 0 233 55 A55 55 0 0 0 178 0 A34 34 0 0 0 144 34 A21 21 0 0 0 165 55 A13 13 0 0 0 178 42"/>
+            <g class="c-guides" fill="none" stroke="#BE0078" stroke-width=".5" stroke-dasharray="1.5 1.5">
+              <circle cx="72" cy="72" r="26"/>
+              <circle cx="188.5" cy="99.5" r="16"/>
+              <circle cx="205.5" cy="27.5" r="11"/>
+              <circle cx="161" cy="17" r="6"/>
+            </g>
+            <g class="c-mark" fill="#BE0078" stroke="#BE0078" stroke-width="2.2">
+              <line x1="72" y1="72" x2="188.5" y2="99.5"/>
+              <line x1="72" y1="72" x2="205.5" y2="27.5"/>
+              <line x1="72" y1="72" x2="161" y2="17"/>
+              <circle cx="72" cy="72" r="26" stroke="none"/>
+              <circle cx="188.5" cy="99.5" r="16" stroke="none"/>
+              <circle cx="205.5" cy="27.5" r="11" stroke="none"/>
+              <circle cx="161" cy="17" r="6" stroke="none"/>
+            </g>
+          </svg>
+          <figcaption>
+            <span>n+1 / n</span>
+            <span>= 1,6180</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- SÓCIOS -->
+    <section class="team" id="socios">
+      <div class="wrap">
+        <p class="eyebrow"><span>04</span> Sócios</p>
+        <h2 class="reveal">Duas mentes, uma mesma órbita.</h2>
+        <div class="partners">
+          <a class="partner reveal" href="https://github.com/julioflima" target="_blank" rel="noopener">
+            <img src="https://github.com/julioflima.png?size=320" alt="Foto de Julio Lima" width="160" height="160" loading="lazy">
+            <div>
+              <h3>Julio Lima</h3>
+              <p class="role">Sócio · Fullstack Developer</p>
+              <span class="handle">github.com/julioflima ↗</span>
+            </div>
+          </a>
+          <a class="partner reveal" href="https://github.com/MelisseLima" target="_blank" rel="noopener">
+            <img src="https://github.com/MelisseLima.png?size=320" alt="Foto de Melisse Lima" width="160" height="160" loading="lazy">
+            <div>
+              <h3>Melisse Lima</h3>
+              <p class="role">Sócia · Software Engineer</p>
+              <span class="handle">github.com/MelisseLima ↗</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section class="contact" id="contato">
+      <svg class="contact-mark" aria-hidden="true"><use href="#mark"/></svg>
+      <div class="wrap">
+        <p class="eyebrow light"><span>05</span> Contato</p>
+        <h2 class="reveal">Vamos espalhar sua próxima ideia.</h2>
+        <a class="cta reveal" href="mailto:contato@viral.top">contato@viral.top <span aria-hidden="true">→</span></a>
+        <address class="reveal">
+          Rua Justa Araújo, 142<br>
+          Fortaleza — CE, Brasil<br>
+          <a href="https://viral.top">viral.top</a>
+        </address>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <svg class="footer-word" role="img" aria-label="viral"><use href="#wordmark"/></svg>
+    <p>© <span id="year">2026</span> viral — an AI corporation.</p>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
